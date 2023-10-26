@@ -1,0 +1,37 @@
+.bodyAll{
+    background-color: black;
+
+}
+/* .mainOnly {
+    min-height: 50vh;
+} */
+
+.headerOne {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    font-size: 70px;
+    padding: auto;
+    background: linear-gradient(to right,green, white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 4px 3px black; */
+    /* margin-top: 10%;     */
+}
+.headerTwo{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    font-size: 40px;
+    padding: auto;
+    background: linear-gradient(to right,blue, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 5%;
+}
+.parrafoGif{
+    padding: auto;
+    text-align: center;
+}

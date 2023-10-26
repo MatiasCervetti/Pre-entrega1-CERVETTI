@@ -1,19 +1,32 @@
-function listaFiesta(nombre, nombreLista) {
-    for (let i = 0; i < nombre.length; i++) {
-        if (nombre[i] === nombreLista) {
-            console.log(nombreLista + " se encuentra en la lista, puede acceder a la fiesta.");
-            return;
+function estaEnLaLista(nombre, lista) {
+    for (let i = 0; i < lista.length; i++) {
+    if (lista[i] === nombre) {
+        return true;
+    }
+    }
+    return false;
+}
+
+function accesoAFiesta(nombre) {
+    if (estaEnLaLista(nombre, listaDeInvitados)) {
+    alert(nombre + " se encuentra en la lista, puede acceder a la fiesta.");
+    } else {
+    alert(nombre + " no se encuentra en la lista, por ende, no puede acceder a la fiesta.");
     }
 }
 
-console.log(nombreLista + " no se encuentra en la lista, por ende, no puede acceder a la fiesta.");
+const listaDeInvitados = [];
+let nombre = prompt("Ingrese un nombre para agregar a la lista de la fiesta o escriba 'EXIT' para finalizar:");
+
+while (nombre !== "EXIT") {
+    listaDeInvitados.push(nombre);
+    nombre = prompt("Inscriba    otro nombre para agregar a la lista o escriba 'EXIT' para terminar:");
 }
 
 
-const nombresLista = ["Florencia", "Matias", "Francisco", "Tomas", "Facundo", "Ignacio"];
+nombre = prompt("Escriba un nombre para verificar el ingreso a la fiesta o escriba 'EXIT' para concluir:");
 
-
-listaFiesta(nombresLista, "Matias");
-listaFiesta(nombresLista, "Mikel");
-listaFiesta(nombresLista, "Lucas");
-listaFiesta(nombresLista, "Francisco");
+while (nombre !== "salir") {
+    accesoAFiesta(nombre);
+    nombre = prompt("Ingrese otro nombre para verificar si se encuentra en la lista o escriba 'EXIT' para acabar:");
+}
